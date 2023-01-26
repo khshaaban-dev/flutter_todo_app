@@ -6,8 +6,7 @@ import 'package:hive_flutter/adapters.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-  final _box = await Hive.openBox(Database.boxName);
-  _box.clear();
+  await Hive.openBox(Database.boxName);
   runApp(
     const App(),
   );
